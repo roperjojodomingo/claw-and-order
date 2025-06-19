@@ -10,7 +10,8 @@
 {
   "current": {
     "logo": "shopify://shop_images/logo.png",
-    "logo_width": 100,
+    "logo_width": 70,
+    "favicon": "shopify://shop_images/logo.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -195,6 +196,17 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-bf5d00d5-8523-4176-aefc-8854af77e17d": {
+        "settings": {
+          "background": "#373737",
+          "background_gradient": "",
+          "text": "#ffcb1f",
+          "button": "#f3f3f3",
+          "button_label": "#ffcb1f",
+          "secondary_button_label": "#f3f3f3",
           "shadow": "#121212"
         }
       }
