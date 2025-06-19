@@ -6,7 +6,6 @@
   position: absolute;
   min-width: 100%;
   width: 20rem;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
 }
 
 .list-menu--disclosure:focus {
@@ -16,6 +15,7 @@
 .list-menu__item--active {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  font-weight: 600;
 }
 
 .list-menu__item--active:hover {
