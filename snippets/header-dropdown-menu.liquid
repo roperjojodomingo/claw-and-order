@@ -19,12 +19,12 @@
                 <a
                   class="link--text "
                   href="{{ link.url }}"
-                  {% if link.child_active %}
+                  {% if link.child_active or link.current %}
                     aria-current="page"
                   {% endif %}
                 >
                   <span
-                    {%- if link.child_active %}
+                    {%- if link.child_active or link.current %}
                       class="header__active-menu-item"
                     {% endif %}
                   >

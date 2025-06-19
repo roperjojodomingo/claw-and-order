@@ -1,0 +1,129 @@
+{{ 'section-video-banner.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'video-banner.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  .video-banner-text-color {
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
+<div class="video-banner-container  desktop-height-550 mobile-height-fullscreen">
+  <div class="video-background">
+    {% if section.settings.video_url != blank %}
+      <video
+        id="hero-video"
+        muted
+        loop
+        playsinline
+        class="video"
+      >
+        <source src="{{ section.settings.video_url  }}" type="video/mp4">
+      </video>
+    {% endif %}
+  </div>
+  <button class="play-video-button">
+    {{ 'icon-play-video.svg' | inline_asset_content }}
+  </button>
+  <div class="video-banner-content page-width">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'heading' %}
+          <h2 class="video-banner-heading video-banner-text-color">{{ block.settings.heading }}</h2>
+        {% when 'text' %}
+          <p class="video-banner-text video-banner-text-color">{{ block.settings.text }}</p>
+        {% when 'buttons' %}
+          {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="video-banner-button">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video banner",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video Url",
+      "default": "https://cdn.shopify.com/videos/c/o/v/961ab77f16c44796bbd75a5e9ebe2087.mp4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Clawfully Good Finds",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "The purrfect balance of indulgence and instinct — just as your cat intended",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Shop now",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "default": "/collections/all",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video banner",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
