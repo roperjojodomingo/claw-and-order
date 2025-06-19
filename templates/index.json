@@ -163,7 +163,8 @@
       ],
       "name": "Other pages",
       "settings": {
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "background": "#ffffff"
       }
     },
     "featured_collection_PtkcHa": {
@@ -227,6 +228,76 @@
         "image": "shopify://shop_images/featured_product.png",
         "text_color": "#000000"
       }
+    },
+    "about_us_Dq9xxg": {
+      "type": "about-us",
+      "blocks": {
+        "heading_QEb4Rq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Redefining Cat Care, One Paw at a Time"
+          }
+        },
+        "text_xbBj7n": {
+          "type": "text",
+          "settings": {
+            "text": "Claw & Order began with one mission — to give cats the best. From treats to toys, we curate every product with love, care, and a whole lot of purring approval."
+          }
+        },
+        "buttons_88kiAY": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QEb4Rq",
+        "text_xbBj7n",
+        "buttons_88kiAY"
+      ],
+      "name": "About us",
+      "settings": {
+        "image": "shopify://shop_images/our_journey_69657155-6956-4949-b674-a3f08fb52443.png",
+        "text_color": "#000000"
+      }
+    },
+    "other_pages_8RMT4T": {
+      "type": "other-pages",
+      "blocks": {
+        "other_page_block_fEDJ83": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/community.png",
+            "heading": "Pawmunity Table",
+            "description": "Join us around the Pawmunity Table — where every treat is shared with love, every purr is a toast to joy, and every product brings cats and their humans closer together. Mealtime is more than food — it’s family.",
+            "button_text": "Join the table",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "other_page_block_w4L9pU": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/tips.png",
+            "heading": "Treats & Tips",
+            "description": "Discover simple, wholesome treats and everyday tips to keep your cat happy, healthy, and purring. From snack-time favorites to care hacks, we’re here to help you treat them right — one paw at a time.",
+            "button_text": "Explore",
+            "url": "#"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "other_page_block_fEDJ83",
+        "other_page_block_w4L9pU"
+      ],
+      "name": "Other pages",
+      "settings": {
+        "text_color": "#000000",
+        "background": "#f7ebdb"
+      }
     }
   },
   "order": [
@@ -236,6 +307,8 @@
     "custom_collections_GaiUUh",
     "other_pages_JQpRip",
     "featured_collection_PtkcHa",
-    "featured_favorite_3ABxgc"
+    "featured_favorite_3ABxgc",
+    "about_us_Dq9xxg",
+    "other_pages_8RMT4T"
   ]
 }
