@@ -1,0 +1,53 @@
+{{ 'section-custom-collections.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .custom-collection-text-color {
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
+<div class="custom-collection-container custom-collection-text-color">
+  <div class="custom-collection-wrapper">
+    {% for block in section.blocks %}
+      {% render block %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom collections",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [{ "type": "custom-collection-block" }],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Custom collections",
+      "blocks": [
+        {
+          "type": "custom-collection-block",
+          "settings": {
+            "collection": "meowgical-essentials"
+          }
+        },
+        {
+          "type": "custom-collection-block",
+          "settings": {
+            "collection": "taste-treats"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

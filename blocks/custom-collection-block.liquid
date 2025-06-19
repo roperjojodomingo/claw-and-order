@@ -1,0 +1,33 @@
+<div class="custom-collection">
+  <div class="custom-collection-image">
+    <img
+      loading="lazy"
+      src="{{  block.settings.collection.image | image_url: width: 1000 }}"
+      alt="{{ block.settings.collection.title  }}"
+    >
+  </div>
+  <div class="custom-collection-data">
+    <h3>{{ block.settings.collection.title }}</h3>
+    {% if block.settings.collection.description != blank %}
+      <p>{{ block.settings.collection.description }}</p>
+    {% endif %}
+    <a href="{{ block.settings.collection.url }}" class="button"> Shop now </a>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection"
+    }
+  ]
+}
+{% endschema %}

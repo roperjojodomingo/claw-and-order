@@ -103,11 +103,41 @@
         "image": "shopify://shop_images/about-us.png",
         "text_color": "#000000"
       }
+    },
+    "custom_collections_GaiUUh": {
+      "type": "custom-collections",
+      "blocks": {
+        "custom_collection_block_kUGxdU": {
+          "type": "custom-collection-block",
+          "settings": {
+            "collection": "meowgical-essentials"
+          },
+          "blocks": {}
+        },
+        "custom_collection_block_PWnPrP": {
+          "type": "custom-collection-block",
+          "settings": {
+            "collection": "taste-treats"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_collection_block_kUGxdU",
+        "custom_collection_block_PWnPrP"
+      ],
+      "name": "Custom collections",
+      "settings": {
+        "featured_collection_1": "",
+        "featured_collection_2": "",
+        "text_color": "#000000"
+      }
     }
   },
   "order": [
     "video_banner_LNcETe",
     "featured_collection",
-    "about_us_yYECBW"
+    "about_us_yYECBW",
+    "custom_collections_GaiUUh"
   ]
 }
