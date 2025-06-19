@@ -69,10 +69,45 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "about_us_yYECBW": {
+      "type": "about-us",
+      "blocks": {
+        "heading_GPEXJH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Cats Love Us"
+          }
+        },
+        "text_m7bkg9": {
+          "type": "text",
+          "settings": {
+            "text": "We don’t just sell cat stuff—we curate the purrfect blend of comfort, curiosity, and chaos. From treats to toys, every item is handpicked to keep your feline overlords entertained, pampered, and in total control (as they should be). It’s not just shopping—it’s worship."
+          }
+        },
+        "buttons_6Nbfwe": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GPEXJH",
+        "text_m7bkg9",
+        "buttons_6Nbfwe"
+      ],
+      "name": "About us",
+      "settings": {
+        "image": "shopify://shop_images/about-us.png",
+        "text_color": "#000000"
+      }
     }
   },
   "order": [
     "video_banner_LNcETe",
-    "featured_collection"
+    "featured_collection",
+    "about_us_yYECBW"
   ]
 }
