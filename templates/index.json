@@ -128,8 +128,39 @@
       ],
       "name": "Custom collections",
       "settings": {
-        "featured_collection_1": "",
-        "featured_collection_2": "",
+        "text_color": "#000000"
+      }
+    },
+    "other_pages_TwMbee": {
+      "type": "other-pages",
+      "blocks": {
+        "other_page_block_6TXkHN": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/cat_nutrition_101.png",
+            "heading": "Cat Nutrition 101",
+            "description": "Unleash the power of purr-fect nutrition. From protein-packed bites to essential nutrients, our curated selection fuels your feline’s nine lives — naturally, deliciously, and with love.",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "other_page_block_CdkJhT": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/curated_with_care.png",
+            "heading": "Curated with Care",
+            "description": "Curated with care, paw-picked with love — every treat and toy is chosen to support your cat’s health, happiness, and wild instincts. Because they deserve nothing less than the best of the best.",
+            "url": "#"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "other_page_block_6TXkHN",
+        "other_page_block_CdkJhT"
+      ],
+      "name": "Other pages",
+      "settings": {
         "text_color": "#000000"
       }
     }
@@ -138,6 +169,7 @@
     "video_banner_LNcETe",
     "featured_collection",
     "about_us_yYECBW",
-    "custom_collections_GaiUUh"
+    "custom_collections_GaiUUh",
+    "other_pages_TwMbee"
   ]
 }

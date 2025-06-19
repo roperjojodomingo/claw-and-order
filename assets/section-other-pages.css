@@ -1,0 +1,141 @@
+.other-page-container {
+  width: 100%;
+  justify-content: center;
+  padding: 90px 0 90px 0;
+  margin-bottom: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+.other-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1660px;
+  justify-content: center;
+  gap: 2%;
+}
+
+.other-page-wrapper > * {
+  flex: 1;
+  width: 25%;
+}
+
+.other-page-wrapper > *:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .other-page-wrapper {
+    width: 90%;
+  }
+
+  .other-page-data h3 {
+    font-size: 2.8rem;
+  }
+
+  .other-page-data p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .other-page-wrapper {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .other-page-wrapper > * {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+
+  .other-page-data h3 {
+    font-size: 2.5rem;
+  }
+
+  .other-page-data p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .other-page-container {
+    padding: 60px 0;
+    margin-bottom: 80px;
+  }
+
+  .other-page-wrapper {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+
+  .other-page-wrapper > * {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .other-page-data {
+    padding: 15px 0 0 0;
+  }
+
+  .other-page-data h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .other-page-data p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .other-page-container {
+    padding: 40px 0;
+    margin-bottom: 60px;
+  }
+
+  .other-page-wrapper {
+    width: 95%;
+  }
+
+  .other-page-data h3 {
+    font-size: 1.8rem;
+  }
+
+  .other-page-data p {
+    font-size: 1rem;
+  }
+}
+
+.other-page-data {
+  padding: 10px;
+  padding: 22px 30px 0 0;
+}
+
+.other-page-image {
+  width: 100%;
+}
+
+.other-page-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.other-page-data h3 {
+  font-size: 3.25rem;
+  margin: 0 0 18px 0;
+}
+
+.other-page-data p {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.other-page-data button {
+  display: inline-block;
+}

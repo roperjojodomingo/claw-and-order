@@ -1,0 +1,48 @@
+<div class="other-page">
+  <div class="other-page-image">
+    <img
+      loading="lazy"
+      src="{{  block.settings.image | image_url: width: 1000 }}"
+      alt="{{ block.settings.heading  }}"
+    >
+  </div>
+  <div class="other-page-data">
+    <h3>{{ block.settings.heading }}</h3>
+    {% if block.settings.description != blank %}
+      <p>{{ block.settings.description }}</p>
+    {% endif %}
+    <a href="{{ block.settings.collection.url }}" class="button">Learn more</a>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Other page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "url",
+      "label": "URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Other page"
+    }
+  ]
+}
+{% endschema %}

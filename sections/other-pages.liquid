@@ -1,0 +1,57 @@
+{{ 'section-other-pages.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .other-page-text-color {
+    color: {{ section.settings.text_color }};
+  }
+</style>
+
+<div class="other-page-container other-page-text-color">
+  <div class="other-page-wrapper">
+    {% for block in section.blocks %}
+      {% render block %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Other pages",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [{ "type": "other-page-block" }],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Other pages",
+      "blocks": [
+        {
+          "type": "other-page-block",
+          "settings": {
+            "heading": "Cat Nutrition 101",
+            "description": "Unleash the power of purr-fect nutrition. From protein-packed bites to essential nutrients, our curated selection fuels your feline’s nine lives — naturally, deliciously, and with love.",
+            "url": "#"
+          }
+        },
+        {
+          "type": "other-page-block",
+          "settings": {
+            "heading": "Curated with Care",
+            "description": "Curated with care, paw-picked with love — every treat and toy is chosen to support your cat’s health, happiness, and wild instincts. Because they deserve nothing less than the best of the best.",
+            "url": "#"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
