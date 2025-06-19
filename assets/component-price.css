@@ -52,6 +52,7 @@
 .price--sold-out .price__availability,
 .price__regular {
   display: block;
+  font-size: 1.6rem;
 }
 
 .price__sale,

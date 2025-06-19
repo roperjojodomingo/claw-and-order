@@ -555,6 +555,8 @@ hr {
   text-decoration: none;
   color: currentColor;
   display: block;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .placeholder {
@@ -1185,8 +1187,8 @@ deferred-media {
 
 .button--secondary,
 .button--tertiary {
-  --color-button: var(--color-secondary-button);
-  --color-button-text: var(--color-secondary-button-text);
+  background-color: var(--primary-btn-bg-color);
+  color: var(--primary-btn-text-color);
 }
 
 .button--tertiary {
@@ -1316,7 +1318,7 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }

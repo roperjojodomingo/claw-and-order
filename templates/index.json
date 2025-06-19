@@ -39,16 +39,16 @@
       ],
       "name": "Video banner",
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/961ab77f16c44796bbd75a5e9ebe2087.mp4"
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/961ab77f16c44796bbd75a5e9ebe2087.mp4",
+        "text_color": "#ffffff"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
+        "collection": "featured-products",
         "products_to_show": 8,
         "title": "<strong>Featured products</strong>",
-        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
