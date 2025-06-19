@@ -131,33 +131,35 @@
         "text_color": "#000000"
       }
     },
-    "other_pages_TwMbee": {
+    "other_pages_JQpRip": {
       "type": "other-pages",
       "blocks": {
-        "other_page_block_6TXkHN": {
+        "other_page_block_NtW9jB": {
           "type": "other-page-block",
           "settings": {
             "image": "shopify://shop_images/cat_nutrition_101.png",
             "heading": "Cat Nutrition 101",
             "description": "Unleash the power of purr-fect nutrition. From protein-packed bites to essential nutrients, our curated selection fuels your feline’s nine lives — naturally, deliciously, and with love.",
+            "button_text": "Learn more",
             "url": "#"
           },
           "blocks": {}
         },
-        "other_page_block_CdkJhT": {
+        "other_page_block_nBD8tP": {
           "type": "other-page-block",
           "settings": {
             "image": "shopify://shop_images/curated_with_care.png",
             "heading": "Curated with Care",
             "description": "Curated with care, paw-picked with love — every treat and toy is chosen to support your cat’s health, happiness, and wild instincts. Because they deserve nothing less than the best of the best.",
+            "button_text": "Learn more",
             "url": "#"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "other_page_block_6TXkHN",
-        "other_page_block_CdkJhT"
+        "other_page_block_NtW9jB",
+        "other_page_block_nBD8tP"
       ],
       "name": "Other pages",
       "settings": {
@@ -191,6 +193,40 @@
         "padding_top": 20,
         "padding_bottom": 100
       }
+    },
+    "featured_favorite_3ABxgc": {
+      "type": "featured-favorite",
+      "blocks": {
+        "heading_ybpz9X": {
+          "type": "heading",
+          "settings": {
+            "heading": "Purr-fect Start: Kitten Gravy by Royal Canin"
+          }
+        },
+        "text_r9iMtn": {
+          "type": "text",
+          "settings": {
+            "text": "Deliciously formulated to support healthy growth, Royal Canin Kitten Gravy is packed with essential nutrients for developing kittens. Soft, savory, and irresistibly satisfying."
+          }
+        },
+        "buttons_XXqeXB": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ybpz9X",
+        "text_r9iMtn",
+        "buttons_XXqeXB"
+      ],
+      "name": "Featured favorite",
+      "settings": {
+        "image": "shopify://shop_images/featured_product.png",
+        "text_color": "#000000"
+      }
     }
   },
   "order": [
@@ -198,7 +234,8 @@
     "featured_collection",
     "about_us_yYECBW",
     "custom_collections_GaiUUh",
-    "other_pages_TwMbee",
-    "featured_collection_PtkcHa"
+    "other_pages_JQpRip",
+    "featured_collection_PtkcHa",
+    "featured_favorite_3ABxgc"
   ]
 }

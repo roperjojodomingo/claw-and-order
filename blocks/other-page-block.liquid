@@ -11,7 +11,7 @@
     {% if block.settings.description != blank %}
       <p>{{ block.settings.description }}</p>
     {% endif %}
-    <a href="{{ block.settings.collection.url }}" class="button">Learn more</a>
+    <a href="{{ block.settings.collection.url }}" class="button">{{ block.settings.button_text }}</a>
   </div>
 </div>
 {% schema %}
@@ -32,6 +32,11 @@
       "type": "inline_richtext",
       "id": "description",
       "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
     },
     {
       "type": "text",

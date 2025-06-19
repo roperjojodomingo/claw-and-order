@@ -1,29 +1,30 @@
-{{ 'section-about-us.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-favorite.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .about-us-text-color {
+  .featured-favorite-text-color {
     color: {{ section.settings.text_color }};
   }
 </style>
 
-<div class="about-us-container">
+<div class="featured-favorite-container">
   <div class="responsive-image-wrapper">
     {% if section.settings.image != blank %}
       <img
         loading="lazy"
-        class="about-us-image"
+        class="featured-favorite-image"
         src="{{ section.settings.image | image_url: width: 2000 }}"
-        alt="About us image"
+        alt="Featured favorite image"
       >
     {% endif %}
 
-    <div class="about-us-content">
+    <div class="featured-favorite-content">
+      <h3>Featured Favorite</h3>
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'heading' %}
-            <h2 class="about-us-text-color">{{ block.settings.heading }}</h2>
+            <h2 class="featured-favorite-text-color">{{ block.settings.heading }}</h2>
           {% when 'text' %}
-            <p class="about-us-text-color">{{ block.settings.text }}</p>
+            <p class="featured-favorite-text-color">{{ block.settings.text }}</p>
           {% when 'buttons' %}
             <a href="{{ block.settings.button_link }}" class="button">
               {{ block.settings.button_label }}
@@ -36,7 +37,7 @@
 
 {% schema %}
 {
-  "name": "About us",
+  "name": "Featured favorite",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
@@ -63,7 +64,7 @@
           "type": "inline_richtext",
           "id": "heading",
           "label": "Heading",
-          "default": "Why Cats Love Us"
+          "default": "Purr-fect Start: Kitten Gravy by Royal Canin"
         }
       ]
     },
@@ -76,7 +77,7 @@
           "type": "inline_richtext",
           "id": "text",
           "label": "Text",
-          "default": "Because your cat runs the house. We just help you keep them happy."
+          "default": "Deliciously formulated to support healthy growth, Royal Canin Kitten Gravy is packed with essential nutrients for developing kittens. Soft, savory, and irresistibly satisfying."
         }
       ]
     },
@@ -102,7 +103,7 @@
   ],
   "presets": [
     {
-      "name": "About us",
+      "name": "Featured favorite",
       "blocks": [
         {
           "type": "heading"
