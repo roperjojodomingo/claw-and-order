@@ -1,0 +1,15 @@
+<div class="quick-link">
+  <div class="quick-link-image">
+    <img
+      loading="lazy"
+      width="500"
+      height="500"
+      src="{{ image | image_url: width: 1000 }}"
+    >
+  </div>
+  <div class="quick-link-content">
+    <h4>{{ title }}</h4>
+    <p>{{ text }}</p>
+    <a class="from-left" href="{{ url }}">{{ link_text }}</a>
+  </div>
+</div>

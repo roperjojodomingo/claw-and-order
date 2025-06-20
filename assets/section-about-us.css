@@ -5,14 +5,14 @@
   justify-content: center;
 }
 
-.responsive-image-wrapper {
+.about-us-container-responsive-image-wrapper {
   position: relative;
   display: inline-block;
   max-width: 2000px;
   width: 100%;
 }
 
-.responsive-image-wrapper img {
+.about-us-container-responsive-image-wrapper img {
   width: 100%;
   height: auto;
   display: block;
@@ -54,12 +54,12 @@
 }
 
 @media (max-width: 768px) {
-  .responsive-image-wrapper {
+  .about-us-container-responsive-image-wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .responsive-image-wrapper img {
+  .about-us-container-responsive-image-wrapper img {
     height: 100vw;
     max-height: 768px;
     object-fit: cover;

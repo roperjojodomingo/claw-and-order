@@ -344,6 +344,69 @@
       "settings": {
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
+    },
+    "quick_links_4URJgX": {
+      "type": "quick-links",
+      "blocks": {
+        "quick_link_block_Y4R9mM": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/Join.png",
+            "title": "Join the Paw-munity",
+            "text": "For exclusive offers, company news and more!",
+            "link_text": "Subscribe",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "quick_link_block_CjfdLy": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/Join_6ab99f42-a366-4ea5-92e7-47274faf38d0.png",
+            "title": "Find us on Instagram",
+            "text": "Sniff out exclusive deals, behind-the-scenes mews, and adorable moments.",
+            "link_text": "Follow us",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "quick_link_block_wq37E3": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/Find.png",
+            "title": "Where to Buy",
+            "text": "Claw & Order goodies are waiting nearby. Go fetch (your cat will thank you)!",
+            "link_text": "Search now",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "quick_link_block_KVVB4e": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/FAQ_51446c8b-4913-402a-9849-91a068705682.png",
+            "title": "Frequently Asked Questions",
+            "text": "Get answers to all your curious cat-quiries, from treats to toys.",
+            "link_text": "Learn more",
+            "url": "#"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "quick_link_block_Y4R9mM",
+        "quick_link_block_CjfdLy",
+        "quick_link_block_wq37E3",
+        "quick_link_block_KVVB4e"
+      ],
+      "name": "Quick links",
+      "settings": {
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
+      }
     }
   },
   "order": [
@@ -356,6 +419,7 @@
     "featured_favorite_3ABxgc",
     "about_us_Dq9xxg",
     "rating_list_pXC79V",
-    "other_pages_8RMT4T"
+    "other_pages_8RMT4T",
+    "quick_links_4URJgX"
   ]
 }

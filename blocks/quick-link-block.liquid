@@ -1,0 +1,46 @@
+{% render 'quick-link',
+  image: block.settings.image,
+  title: block.settings.title,
+  text: block.settings.text,
+  link_text: block.settings.link_text,
+  url: block.settings.url
+%}
+
+{% schema %}
+{
+  "name": "Quick link",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "text",
+      "id": "url",
+      "label": "URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick link",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

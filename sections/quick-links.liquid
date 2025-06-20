@@ -1,0 +1,34 @@
+{{ 'section-quick-links.css' | asset_url | stylesheet_tag }}
+
+<div class="quick-links-container color-{{ section.settings.color_scheme }}">
+  <div class="quick-links-layout">
+    <div class="quick-links-wrapper">
+      {% for block in section.blocks %}
+        {% render block %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Quick links",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    }
+  ],
+  "blocks": [{ "type": "quick-link-block" }],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Quick links"
+    }
+  ]
+}
+{% endschema %}
