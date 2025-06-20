@@ -1,13 +1,6 @@
 {{ 'section-other-pages.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .other-page-color-{{ section.id }} {
-    color: {{ section.settings.text_color }};
-    background: {{ section.settings.background }};
-  }
-{%- endstyle -%}
-
-<div class="other-page-container other-page-color-{{ section.id }}">
+<div class="other-page-container color-{{ section.settings.color_scheme }}">
   <div class="other-page-wrapper">
     {% for block in section.blocks %}
       {% render block %}
@@ -23,16 +16,9 @@
   },
   "settings": [
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#FFFFFF"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
     }
   ],
   "blocks": [{ "type": "other-page-block" }],

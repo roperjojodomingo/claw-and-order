@@ -1,12 +1,6 @@
 {{ 'section-custom-collections.css' | asset_url | stylesheet_tag }}
 
-<style>
-  .custom-collection-text-color {
-    color: {{ section.settings.text_color }};
-  }
-</style>
-
-<div class="custom-collection-container custom-collection-text-color">
+<div class="custom-collection-container  color-{{ section.settings.color_scheme }}">
   <div class="custom-collection-wrapper">
     {% for block in section.blocks %}
       {% render block %}
@@ -22,10 +16,9 @@
   },
   "settings": [
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#000000"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
     }
   ],
   "blocks": [{ "type": "custom-collection-block" }],

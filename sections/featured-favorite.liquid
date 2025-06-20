@@ -1,11 +1,5 @@
 {{ 'section-featured-favorite.css' | asset_url | stylesheet_tag }}
 
-<style>
-  .featured-favorite-text-color {
-    color: {{ section.settings.text_color }};
-  }
-</style>
-
 <div class="featured-favorite-container">
   <div class="responsive-image-wrapper">
     {% if section.settings.image != blank %}
@@ -17,14 +11,14 @@
       >
     {% endif %}
 
-    <div class="featured-favorite-content">
+    <div class="featured-favorite-content color-{{ section.settings.color_scheme }}">
       <h3>Featured Favorite</h3>
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'heading' %}
-            <h2 class="featured-favorite-text-color">{{ block.settings.heading }}</h2>
+            <h2>{{ block.settings.heading }}</h2>
           {% when 'text' %}
-            <p class="featured-favorite-text-color">{{ block.settings.text }}</p>
+            <p>{{ block.settings.text }}</p>
           {% when 'buttons' %}
             <a href="{{ block.settings.button_link }}" class="button">
               {{ block.settings.button_label }}
@@ -48,10 +42,9 @@
       "label": "Image"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#000000"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
     }
   ],
   "blocks": [

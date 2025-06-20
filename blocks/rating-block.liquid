@@ -1,0 +1,36 @@
+{% render 'rating',
+  star_rating: block.settings.star_rating,
+  text: block.settings.text,
+  customer_name: block.settings.customer_name,
+  credentials: block.settings.credentials
+%}
+
+{% schema %}
+{
+  "name": "Rating",
+  "settings": [
+    { "type": "range", "id": "star_rating", "label": "Star Rating", "min": 1, "max": 5, "step": 1, "default": 5 },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "customer_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "text",
+      "id": "credentials",
+      "label": "Credentials"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rating",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

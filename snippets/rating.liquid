@@ -1,0 +1,14 @@
+<div class="rating">
+  <div class="rating-star-wrapper">
+    {% for i in (1..star_rating) %}
+      {{ 'icon-rating-star.svg' | inline_asset_content }}
+    {% endfor %}
+  </div>
+  <div class="rating-text-wrapper">
+    <p class="description">"{{ text }}"</p>
+    <p class="customer">
+      <strong>{{ customer_name }}</strong><br>
+      {{ credentials }}
+    </p>
+  </div>
+</div>

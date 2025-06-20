@@ -1,0 +1,44 @@
+{{ 'section-rating-list.css' | asset_url | stylesheet_tag }}
+<div
+  class="ratings color-{{ section.settings.color_scheme }}"
+>
+  <div class="ratings-wrapper">
+    <h2>
+      {{ section.settings.heading }}
+    </h2>
+    <div class="ratings-grid-wrapper">
+      {% for block in section.blocks %}
+        {% render block %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Ratings",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Pawssionate Shoppers"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    }
+  ],
+  "blocks": [{ "type": "rating-block" }],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Ratings",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

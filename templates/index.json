@@ -57,7 +57,7 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -101,7 +101,7 @@
       "name": "About us",
       "settings": {
         "image": "shopify://shop_images/about-us.png",
-        "text_color": "#000000"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "custom_collections_GaiUUh": {
@@ -128,7 +128,7 @@
       ],
       "name": "Custom collections",
       "settings": {
-        "text_color": "#000000"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "other_pages_JQpRip": {
@@ -163,8 +163,7 @@
       ],
       "name": "Other pages",
       "settings": {
-        "text_color": "#000000",
-        "background": "#ffffff"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "featured_collection_PtkcHa": {
@@ -182,7 +181,7 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -226,7 +225,7 @@
       "name": "Featured favorite",
       "settings": {
         "image": "shopify://shop_images/featured_product.png",
-        "text_color": "#000000"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "about_us_Dq9xxg": {
@@ -259,8 +258,56 @@
       ],
       "name": "About us",
       "settings": {
-        "image": "shopify://shop_images/our_journey_69657155-6956-4949-b674-a3f08fb52443.png",
-        "text_color": "#000000"
+        "image": "shopify://shop_images/our_journey_1.jpg",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
+      }
+    },
+    "rating_list_pXC79V": {
+      "type": "rating-list",
+      "blocks": {
+        "rating_block_6TH9jC": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "My cats love the taste and I love the ingredients. It’s rare to find treats that are both nutritious and cat-approved.",
+            "customer_name": "Lila Whiskerstein",
+            "credentials": "Veterinarian & Feline Wellness Expert"
+          },
+          "blocks": {}
+        },
+        "rating_block_E69eCi": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "The perfect mix of flavor and health. I recommend this line to all my clients with picky eaters.",
+            "customer_name": "Sophie Meowrence",
+            "credentials": "Certified Feline Nutritionist"
+          },
+          "blocks": {}
+        },
+        "rating_block_FRTAtP": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "These products don’t just feed—they enrich. I’ve seen happier, more playful cats in homes using Claw & Order.",
+            "customer_name": "Mark Purrcell",
+            "credentials": "MS, Animal Behaviorist"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "rating_block_6TH9jC",
+        "rating_block_E69eCi",
+        "rating_block_FRTAtP"
+      ],
+      "name": "Ratings",
+      "settings": {
+        "heading": "Pawssionate Shoppers",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "other_pages_8RMT4T": {
@@ -295,8 +342,7 @@
       ],
       "name": "Other pages",
       "settings": {
-        "text_color": "#000000",
-        "background": "#f7ebdb"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     }
   },
@@ -309,6 +355,7 @@
     "featured_collection_PtkcHa",
     "featured_favorite_3ABxgc",
     "about_us_Dq9xxg",
+    "rating_list_pXC79V",
     "other_pages_8RMT4T"
   ]
 }
