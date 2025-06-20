@@ -1,0 +1,237 @@
+{{ 'section-custom-footer.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .custom-footer-container {
+    background: {{ section.settings.background }} !important;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+</style>
+
+<div class="custom-footer-container color-{{ section.settings.color_scheme }}">
+  <div class="custom-footer-links">
+    <div class="custom-footer-grid">
+      <div class="custom-footer-item">
+        <h3>{{ section.settings.menu_1_heading }}</h3>
+        {%- if section.settings.menu_1 != blank -%}
+          <ul class="custom-footer-item-links">
+            {%- for link in linklists[section.settings.menu_1].links -%}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+      <div class="custom-footer-item">
+        <h3>{{ section.settings.menu_2_heading }}</h3>
+        {%- if section.settings.menu_2 != blank -%}
+          <ul class="custom-footer-item-links">
+            {%- for link in linklists[section.settings.menu_2].links -%}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+      <div class="custom-footer-item">
+        <h3>{{ section.settings.socials_heading }}</h3>
+        <ul class="custom-footer-item-socials">
+          {% if section.settings.social_1 != blank %}
+            <li>
+              <a
+                href="{{ section.settings.social_1 }}"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                {{- 'icon-facebook.svg' | inline_asset_content -}}
+              </a>
+            </li>
+          {% endif %}
+          {% if section.settings.social_2 != blank %}
+            <li>
+              <a
+                href="{{ section.settings.social_2 }}"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                {{- 'icon-instagram.svg' | inline_asset_content -}}
+              </a>
+            </li>
+          {% endif %}
+          {% if section.settings.social_3 != blank %}
+            <li>
+              <a
+                href="{{ section.settings.social_3 }}"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                {{- 'icon-linkedin.svg' | inline_asset_content -}}
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="custom-footer-item">
+        <h3>{{ section.settings.news_letter_heading }}</h3>
+        <p>{{ section.settings.news_letter_text }}</p>
+        {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="newsletter-form__field-wrapper">
+            <div class="field">
+              <input
+                id="NewsletterForm--{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                class="field__input"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="ContactFooter-error"
+                {% elsif form.posted_successfully? %}
+                  aria-describedby="ContactFooter-success"
+                {% endif %}
+                placeholder="email@example.com"
+                required
+              >
+              <label class="field__label" for="NewsletterForm--{{ section.id }}"> email@example.com </label>
+            </div>
+            <button
+              type="submit"
+              class="button"
+              name="commit"
+              id="Subscribe"
+              aria-label="{{ 'newsletter.button_label' | t }}"
+              style="margin-top: 15px;"
+            >
+              Subscribe
+            </button>
+            {%- if form.errors -%}
+              <small class="newsletter-form__message form__message" id="ContactFooter-error">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </small>
+            {%- endif -%}
+          </div>
+          {%- if form.posted_successfully? -%}
+            <h3
+              class="newsletter-form__message newsletter-form__message--success form__message"
+              id="ContactFooter-success"
+              tabindex="-1"
+              autofocus
+            >
+              <span class="svg-wrapper">
+                {{- 'icon-success.svg' | inline_asset_content -}}
+              </span>
+              {{- 'newsletter.success' | t }}
+            </h3>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+  <div class="custom-footer-payment">
+    <div class="custom-footer-payment-icons">
+      <ul class="inline-list payment-icons">
+        {{- 'amex.svg' | inline_asset_content -}}
+        {{- 'apple-pay.svg' | inline_asset_content -}}
+        {{- 'diners-club.svg' | inline_asset_content -}}
+        {{- 'discover.svg' | inline_asset_content -}}
+        {{- 'google-pay.svg' | inline_asset_content -}}
+        {{- 'mastercard.svg' | inline_asset_content -}}
+        {{- 'paypal.svg' | inline_asset_content -}}
+        {{- 'shop.svg' | inline_asset_content -}}
+        {{- 'venmo.svg' | inline_asset_content -}}
+        {{- 'visa.svg' | inline_asset_content -}}
+      </ul>
+    </div>
+    <p>© 2025, Claw & Order</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom footer",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#f6f8f8"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "text",
+      "id": "menu_1_heading",
+      "label": "Menu 1 heading"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_1",
+      "label": "Menu 1"
+    },
+    {
+      "type": "text",
+      "id": "menu_2_heading",
+      "label": "Menu 2 heading"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_2",
+      "label": "Menu 2"
+    },
+    {
+      "type": "text",
+      "id": "socials_heading",
+      "label": "Socials heading"
+    },
+    {
+      "type": "url",
+      "id": "social_1",
+      "label": "Facebook"
+    },
+    {
+      "type": "url",
+      "id": "social_2",
+      "label": "Instagram"
+    },
+    {
+      "type": "url",
+      "id": "social_3",
+      "label": "LinkedIn"
+    },
+    {
+      "type": "text",
+      "id": "news_letter_heading",
+      "label": "News letter heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "news_letter_text",
+      "label": "News letter text"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom footer"
+    }
+  ]
+}
+{% endschema %}

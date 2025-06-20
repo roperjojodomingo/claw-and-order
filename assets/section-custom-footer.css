@@ -1,0 +1,126 @@
+.custom-footer-links {
+  position: relative;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 50px 30px 0;
+}
+
+.custom-footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.custom-footer-item {
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding-left: 30px;
+  vertical-align: top;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-footer-item {
+    width: 25%;
+  }
+}
+
+.custom-footer-item h3 {
+  font-size: 2.25rem;
+  margin: 0 0 0.5em;
+}
+
+.custom-footer-item-links {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-footer-item-links li {
+  list-style-type: none;
+  margin: 0 0 0.25em 0;
+  list-style-position: inside;
+}
+
+.custom-footer-item-links a {
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  display: inline-block;
+}
+
+.custom-footer-item-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: rgb(var(--color-foreground));
+  transition: width 0.3s ease;
+}
+
+.custom-footer-item-links a:hover::after {
+  width: 100%;
+}
+
+.custom-footer-item-socials {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-footer-item-socials {
+    margin-left: -12px;
+  }
+}
+
+.custom-footer-item-socials li {
+  list-style-type: none;
+  margin: 0;
+  list-style-position: inside;
+  display: inline-block;
+}
+
+.custom-footer-item-socials a {
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-footer-item p {
+  margin: 0;
+  margin: 0 0 15px 0;
+}
+
+.custom-footer-payment {
+  max-width: 100%;
+  padding: 30px 0 30px 0;
+  margin: 0 auto;
+}
+
+.custom-footer-payment {
+  text-align: center;
+  font-size: 12px;
+}
+
+.custom-footer-payment-icons {
+  margin: 15px 0;
+}
+.custom-footer-payment-icons ul {
+  margin: 0 0 15px 20px;
+  padding: 0;
+}
+
+.payment-icons svg {
+  height: 40px;
+  width: 55px;
+}
