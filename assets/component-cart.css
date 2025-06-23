@@ -151,8 +151,11 @@ cart-items {
   }
 }
 
-.cart__ctas button {
+.cart__ctas {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart__ctas > * + * {

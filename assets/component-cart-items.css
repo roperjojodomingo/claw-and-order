@@ -110,9 +110,11 @@ cart-items .title-wrapper-with-link {
 }
 
 .product-option {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   word-break: break-word;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
+  text-align: center;
+  margin-top: 20px;
 }
 
 .cart-item cart-remove-button {
