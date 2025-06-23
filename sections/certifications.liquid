@@ -1,0 +1,27 @@
+{{ 'section-certifications.css' | asset_url | stylesheet_tag }}
+
+<div class="certifications-container">
+  {% for cert in collection.metafields.custom.certifications.value %}
+    <img
+      src="{{ cert | image_url: width: 300 }}"
+      loading="lazy"
+    >
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Certifications",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Certifications",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

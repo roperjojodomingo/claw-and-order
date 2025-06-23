@@ -33,7 +33,7 @@
 
 .play-video-button {
   position: absolute;
-  top: 75%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -46,7 +46,6 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  z-index: 9999;
 }
 
 .video-banner-content {

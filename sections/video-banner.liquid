@@ -21,9 +21,6 @@
       </video>
     {% endif %}
   </div>
-  <button class="play-video-button">
-    {{ 'icon-play-video.svg' | inline_asset_content }}
-  </button>
   <div class="video-banner-content page-width">
     {% for block in section.blocks %}
       {% case block.type %}
@@ -39,6 +36,9 @@
           {% endif %}
       {% endcase %}
     {% endfor %}
+    <button class="play-video-button">
+      {{ 'icon-play-video.svg' | inline_asset_content }}
+    </button>
   </div>
 </div>
 
