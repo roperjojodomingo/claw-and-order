@@ -82,6 +82,103 @@
         "padding_bottom": 100
       }
     },
+    "image_with_text_9G7iLW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_zFtxpm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Treats & Tips",
+            "heading_size": "h1"
+          }
+        },
+        "text_phfEQd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore simple, wholesome ways to treat your feline like royalty. From tasty snack ideas to everyday care tips, discover how to nourish, entertain, and bond with your cat—one purr at a time.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_mqNGAq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Feed the Curiosity",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zFtxpm",
+        "text_phfEQd",
+        "button_mqNGAq"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/cat_eat.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rating_list_Prftf4": {
+      "type": "rating-list",
+      "blocks": {
+        "rating_block_8NXBLV": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "From nutrition to comfort, every product feels like it was designed with real feline needs in mind. My cats love the food — and won’t give up their new bed!",
+            "customer_name": "Elena Torres",
+            "credentials": "DVM, Feline Specialist"
+          },
+          "blocks": {}
+        },
+        "rating_block_zzA3Lf": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "It’s rare to find a brand that excels at both treats <em>and</em> toys. The scratcher is a hit, and I appreciate the clean ingredients in the treats.",
+            "customer_name": "Maya Chen",
+            "credentials": "Certified Pet Nutrition Coach"
+          },
+          "blocks": {}
+        },
+        "rating_block_EMDBng": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "Smart design, premium feel, and most importantly — my cat is obsessed. The cozy bed and natural treats are a winning combo.",
+            "customer_name": "Leo Graham",
+            "credentials": "Feline Behaviorist"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "rating_block_8NXBLV",
+        "rating_block_zzA3Lf",
+        "rating_block_EMDBng"
+      ],
+      "name": "Ratings",
+      "settings": {
+        "heading": "What Our Pawrents Say",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "background": "#f5f7f7"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -104,6 +201,8 @@
   },
   "order": [
     "main",
+    "image_with_text_9G7iLW",
+    "rating_list_Prftf4",
     "related-products"
   ]
 }

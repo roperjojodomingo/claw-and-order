@@ -1,6 +1,13 @@
 {{ 'section-rating-list.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .ratings-background-{{ section.id }}{
+    background: {{section.settings.background}};
+  }
+{% endstyle %}
+
 <div
-  class="ratings color-{{ section.settings.color_scheme }}"
+  class="ratings color-{{ section.settings.color_scheme }} ratings-background-{{ section.id }}"
 >
   <div class="ratings-wrapper">
     <h2>
@@ -30,6 +37,11 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
     }
   ],
   "blocks": [{ "type": "rating-block" }],

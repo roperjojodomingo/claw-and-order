@@ -307,7 +307,8 @@
       "name": "Ratings",
       "settings": {
         "heading": "Pawssionate Shoppers",
-        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "background": ""
       }
     },
     "other_pages_8RMT4T": {
@@ -407,24 +408,6 @@
       "settings": {
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
-    },
-    "custom_footer_rkXiPE": {
-      "type": "custom-footer",
-      "name": "Custom footer",
-      "settings": {
-        "background": "#f6f8f8",
-        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
-        "menu_1_heading": "Browse",
-        "menu_1": "main-menu",
-        "menu_2_heading": "Support",
-        "menu_2": "footer",
-        "socials_heading": "Follow us",
-        "social_1": "https://www.facebook.com/RevivalEinkorn/",
-        "social_2": "https://www.instagram.com/revivaleinkorn/",
-        "social_3": "https://www.linkedin.com/company/revival-einkorn/",
-        "news_letter_heading": "Newsletter",
-        "news_letter_text": "Be the first to know about our biggest and best sales"
-      }
     }
   },
   "order": [
@@ -438,7 +421,6 @@
     "about_us_Dq9xxg",
     "rating_list_pXC79V",
     "other_pages_8RMT4T",
-    "quick_links_4URJgX",
-    "custom_footer_rkXiPE"
+    "quick_links_4URJgX"
   ]
 }

@@ -11,6 +11,24 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_footer_DMddFc": {
+      "type": "custom-footer",
+      "name": "Custom footer",
+      "settings": {
+        "background": "#f6f8f8",
+        "color_scheme": "",
+        "menu_1_heading": "Browse",
+        "menu_1": "main-menu",
+        "menu_2_heading": "Support",
+        "menu_2": "footer",
+        "socials_heading": "Follow us",
+        "social_1": "#",
+        "social_2": "#",
+        "social_3": "#",
+        "news_letter_heading": "Newsletter",
+        "news_letter_text": "Be the first to know about our biggest and best sales"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -58,6 +76,7 @@
     }
   },
   "order": [
+    "custom_footer_DMddFc",
     "footer"
   ]
 }
