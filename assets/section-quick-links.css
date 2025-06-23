@@ -29,26 +29,6 @@
   }
 }
 
-.quick-links-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .quick-links-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .quick-links-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-}
-
 .quick-link {
   text-align: left;
   display: flex;

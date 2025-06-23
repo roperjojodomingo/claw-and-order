@@ -16,32 +16,69 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
+{%- paginate blog.articles by 4 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
+    <h1 class=" title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} pawmunity-table-heading">
+      Pawmunity Table
     </h1>
-
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div
-          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
-        </div>
-      {%- endfor -%}
+    <div class="blog-articles-container">
+      <div class="blog-articles-main">
+        {%- for article in blog.articles -%}
+          <article class="blog-articles-individual">
+            <p class="article-date">{{ article.published_at | time_tag: format: 'date' }}</p>
+            <div class="article-content">
+              <div class="article-main-content">
+                {% if article.image != blank %}
+                  <img
+                    srcset="
+                      {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                      {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                      {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                      {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                      {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                    "
+                    src="{{ article.image.src | image_url: width: 533 }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ article.image.src.alt | escape }}"
+                    class="article-image"
+                    {% unless lazy_load == false %}
+                      loading="lazy"
+                    {% endunless %}
+                    width="{{ article.image.width }}"
+                    height="{{ article.image.height }}"
+                  >
+                {% endif %}
+                <h3 class="article-title">
+                  <a href="{{ article.url }}">{{ article.title }}</a>
+                </h3>
+                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                  <p class="article-card__excerpt">
+                    {%- if article.excerpt.size > 0 -%}
+                      {{ article.excerpt | strip_html | truncatewords: 60 }}
+                    {%- else -%}
+                      {{ article.content | strip_html | truncatewords: 60 }}
+                    {%- endif -%}
+                  </p>
+                {%- endif -%}
+                <a class="article-read-more" href="{{ article.url }}">Read more</a>
+              </div>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+      <div class="blog-recent-articles">
+        <h4>Recent articles</h4>
+        {%- for article in blog.articles -%}
+          <div class="recent-article-container">
+            <div class="hover-line">
+              <a href="{{ article.url }}">{{ article.title }}</a>
+            </div>
+            <p>{{ article.published_at | time_tag: format: 'date' }}</p>
+          </div>
+        {%- endfor -%}
+      </div>
     </div>
 
     {%- if paginate.pages > 1 -%}

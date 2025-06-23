@@ -11,6 +11,12 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "1750659912d72a0dac": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "custom_footer_DMddFc": {
       "type": "custom-footer",
       "name": "Custom footer",
@@ -76,6 +82,7 @@
     }
   },
   "order": [
+    "1750659912d72a0dac",
     "custom_footer_DMddFc",
     "footer"
   ]

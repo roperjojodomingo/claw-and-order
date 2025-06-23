@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -7,13 +16,65 @@
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
-        "show_author": false,
+        "show_author": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "quick_links_4Tade8": {
+      "type": "quick-links",
+      "blocks": {
+        "quick_link_block_zcDwyz": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/shop.jpg",
+            "title": "Where to Buy",
+            "text": "Claw & Order goodies are waiting nearby. Go fetch (your cat will thank you)!",
+            "link_text": "Search now",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "quick_link_block_iXdWgC": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/shake.jpg",
+            "title": "Join the Paw-munity",
+            "text": "For exclusive offers, company news and more!",
+            "link_text": "Subscribe",
+            "url": "#"
+          },
+          "blocks": {}
+        },
+        "quick_link_block_97ATdr": {
+          "type": "quick-link-block",
+          "name": "Quick link",
+          "settings": {
+            "image": "shopify://shop_images/follow.jpg",
+            "title": "Find us on Instagram",
+            "text": "Sniff out exclusive deals, behind-the-scenes mews, and adorable moments.",
+            "link_text": "Follow us",
+            "url": "#"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "quick_link_block_zcDwyz",
+        "quick_link_block_iXdWgC",
+        "quick_link_block_97ATdr"
+      ],
+      "name": "Quick links",
+      "settings": {
+        "color_scheme": "",
+        "num_of_column": 3
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "quick_links_4Tade8"
   ]
 }

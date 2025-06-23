@@ -82,37 +82,25 @@
         "padding_bottom": 100
       }
     },
+    "image_banner_ApmPJN": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/item.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "image_with_text_9G7iLW": {
       "type": "image-with-text",
-      "blocks": {
-        "heading_zFtxpm": {
-          "type": "heading",
-          "settings": {
-            "heading": "Treats & Tips",
-            "heading_size": "h1"
-          }
-        },
-        "text_phfEQd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Explore simple, wholesome ways to treat your feline like royalty. From tasty snack ideas to everyday care tips, discover how to nourish, entertain, and bond with your cat—one purr at a time.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_mqNGAq": {
-          "type": "button",
-          "settings": {
-            "button_label": "Feed the Curiosity",
-            "button_link": "#",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_zFtxpm",
-        "text_phfEQd",
-        "button_mqNGAq"
-      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/cat_eat.jpg",
@@ -201,6 +189,7 @@
   },
   "order": [
     "main",
+    "image_banner_ApmPJN",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products"

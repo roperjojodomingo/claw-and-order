@@ -1,5 +1,19 @@
 {{ 'section-quick-links.css' | asset_url | stylesheet_tag }}
 
+{% style %}
+  .quick-links-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .quick-links-wrapper {
+      grid-template-columns: repeat({{ section.settings.num_of_column }}, 1fr);
+      gap: 40px;
+    }
+  }
+{% endstyle %}
 <div class="quick-links-container color-{{ section.settings.color_scheme }}">
   <div class="quick-links-layout">
     <div class="quick-links-wrapper">
@@ -21,6 +35,12 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme"
+    },
+    {
+      "type": "number",
+      "id": "num_of_column",
+      "label": "Number of columns",
+      "default": 4
     }
   ],
   "blocks": [{ "type": "quick-link-block" }],
