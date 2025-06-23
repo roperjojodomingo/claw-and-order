@@ -3,5 +3,7 @@
 }
 
 .related-products__heading {
-  margin: 0 0 3rem;
+  margin: 0 0 15px;
+  font-size: calc(var(--font-heading-scale) * 4.8rem);
+  text-align: center;
 }

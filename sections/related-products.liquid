@@ -6,6 +6,10 @@
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
+{%- unless section.settings.quick_add == 'none' -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+{%- endunless -%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -28,7 +32,7 @@
     data-product-id="{{ product.id }}"
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+      <h2 class="related-products__heading inline-richtext">
         {{ section.settings.heading }}
       </h2>
       <ul
@@ -45,7 +49,9 @@
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
-              skip_styles: skip_card_product_styles
+              skip_styles: skip_card_product_styles,
+              quick_add: section.settings.quick_add,
+              section_id: section.id
             %}
           </li>
           {%- assign skip_card_product_styles = true -%}
@@ -134,7 +140,7 @@
           "value": "2",
           "label": "t:sections.related-products.settings.columns_mobile.options__2.label"
         }
-      ]    
+      ]
     },
     {
       "type": "color_scheme",
@@ -225,6 +231,26 @@
       "default": false,
       "label": "t:sections.related-products.settings.show_rating.label",
       "info": "t:sections.related-products.settings.show_rating.info"
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
+        },
+        {
+          "value": "standard",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
+        },
+        {
+          "value": "bulk",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
+        }
+      ]
     },
     {
       "type": "header",

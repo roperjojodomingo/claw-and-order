@@ -192,11 +192,33 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
+                <hr class="product-form-separator" style="margin-bottom: 30px;">
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
                   </div>
                 {%- endif -%}
+
+              {%- when 'free_shipping' -%}
+                <div class="free-shipping">
+                  {{- 'icon-shipping.svg' | inline_asset_content -}}
+                  <p>Free Shipping on Orders Over ₱2,500!</p>
+                </div>
+
+              {%- when 'certifications' -%}
+                <hr class="product-form-separator" style="margin-top: 30px;">
+                {% if product.metafields.custom.certifications != blank %}
+                  <div class="main-product-certifications-container">
+                    {% for cert in product.metafields.custom.certifications.value %}
+                      <img
+                        src="{{ cert | image_url: width: 300 }}"
+                        loading="lazy"
+                      >
+                    {% endfor %}
+                  </div>
+                  <hr class="product-form-separator" style="margin-top: 30px;">
+                {% endif %}
+
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -243,11 +265,13 @@
                     {{ 'products.product.quantity.label' | t }}
                     <span class="quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}">
                       {%- render 'loading-spinner' -%}
-                      <span
-                        >(
-                        {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
-                        )</span
-                      >
+                      {% comment %}
+                        <span
+                          >(
+                          {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
+                          )</span
+                        >
+                      {% endcomment %}
                     </span>
                   </label>
                   <div class="price-per-item__container">
@@ -356,7 +380,10 @@
                                 </dt>
                                 <dd>
                                   <span class="price-per-item--current">
-                                    {{- 'products.product.volume_pricing.price_at_each_html' | t: price: variant_price -}}
+                                    {{-
+                                      'products.product.volume_pricing.price_at_each_html'
+                                      | t: price: variant_price
+                                    -}}
                                   </span>
                                 </dd>
                               </dl>
@@ -917,6 +944,16 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "free_shipping",
+      "name": "Free shipping",
+      "limit": 1
+    },
+    {
+      "type": "certifications",
+      "name": "Certifications",
       "limit": 1
     },
     {
@@ -1674,7 +1711,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_2.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_2",
@@ -1874,7 +1911,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_3.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_3",
@@ -2176,7 +2213,7 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
-    },    
+    },
     {
       "type": "select",
       "id": "media_position",
