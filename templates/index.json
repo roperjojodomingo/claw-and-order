@@ -54,7 +54,7 @@
         "description_style": "body",
         "columns_desktop": 4,
         "enable_desktop_slider": true,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
@@ -178,7 +178,7 @@
         "description_style": "body",
         "columns_desktop": 3,
         "enable_desktop_slider": false,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
@@ -406,7 +406,8 @@
       ],
       "name": "Quick links",
       "settings": {
-        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "num_of_column": 4
       }
     }
   },

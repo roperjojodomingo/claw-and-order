@@ -1,0 +1,73 @@
+.featured-collection-slider-wrapper {
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+}
+
+.featured-product-slider-wrapper slider-component {
+  position: relative;
+}
+
+.slider-side-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.slider-button--side {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
+  pointer-events: auto;
+  background-color: #373737;
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.slider-button--left {
+  left: 15px;
+}
+
+.slider-button--right {
+  right: 15px;
+}
+
+.slider-button--left .svg-wrapper {
+  transform: rotate(180deg);
+}
+
+slider-component:hover .slider-button--side {
+  opacity: 1;
+  visibility: visible;
+}
+
+slider-component:hover .slider-button--side:disabled {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 749px) {
+  .slider-button--side {
+    display: none;
+  }
+}
+
+.slider-button--side:focus {
+  outline-offset: 2px;
+}
+
+slider-component .grid {
+  min-height: 200px;
+}
