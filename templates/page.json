@@ -1,14 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_F9T3bG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_RkXzRP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Loved by Cats, Trusted by Humans",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RkXzRP"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_FdRthK": {
+      "type": "rich-text",
+      "blocks": {
+        "text_YQfA9Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Claw & Order, we don’t just sell cat products—we celebrate the feline way of life. From nutrient-rich meals made with thoughtfully sourced ingredients to irresistibly cozy beds and scratchers that satisfy their instincts, everything we offer is crafted to keep tails high and whiskers twitching. Our treats are tasty, our toys are engaging, and our commitment to quality means your cat gets nothing less than the best. Because when your cat is happy, so are we—and that’s what keeps them coming back for more purrs, more play, and more love.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_YQfA9Q"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_F9T3bG",
+    "rich_text_FdRthK"
   ]
 }
