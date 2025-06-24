@@ -1,0 +1,66 @@
+{{ 'section-custom-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-image-banner">
+  {%- if section.settings.image != blank or section.settings.image_mobile != blank -%}
+    <div class="custom-image-banner-wrapper">
+      {%- if section.settings.image_mobile != blank -%}
+        <img
+          src="{{ section.settings.image_mobile | image_url: width: 750 }}"
+          srcset="
+            {{ section.settings.image_mobile | image_url: width: 375 }} 375w,
+            {{ section.settings.image_mobile | image_url: width: 550 }} 550w,
+            {{ section.settings.image_mobile | image_url: width: 750 }} 750w
+          "
+          sizes="100vw"
+          alt="{{ section.settings.image_mobile.alt | escape }}"
+          class="custom-image-banner__image custom-image-banner__image--mobile"
+          loading="lazy"
+          width="{{ section.settings.image_mobile.width }}"
+          height="{{ section.settings.image_mobile.height }}"
+        >
+      {%- endif -%}
+      {%- if section.settings.image != blank -%}
+        <img
+          src="{{ section.settings.image | image_url: width: 1920 }}"
+          srcset="
+            {{ section.settings.image | image_url: width: 750 }} 750w,
+            {{ section.settings.image | image_url: width: 1100 }} 1100w,
+            {{ section.settings.image | image_url: width: 1500 }} 1500w,
+            {{ section.settings.image | image_url: width: 1920 }} 1920w,
+            {{ section.settings.image | image_url: width: 2400 }} 2400w
+          "
+          sizes="100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          class="custom-image-banner__image custom-image-banner__image--desktop"
+          loading="lazy"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+        >
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Custom image banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Select image for mobile"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom image banner"
+    }
+  ]
+}
+{% endschema %}

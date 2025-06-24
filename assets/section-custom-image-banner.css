@@ -1,0 +1,35 @@
+.custom-image-banner {
+  width: 100%;
+  display: block;
+}
+
+.custom-image-banner-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.custom-image-banner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.custom-image-banner__image--mobile {
+  display: block;
+}
+
+.custom-image-banner__image--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .custom-image-banner__image--mobile {
+    display: none;
+  }
+
+  .custom-image-banner__image--desktop {
+    display: block;
+  }
+}

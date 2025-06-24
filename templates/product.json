@@ -87,25 +87,45 @@
         "padding_bottom": 100
       }
     },
-    "image_banner_ApmPJN": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
+    "custom_image_banner_HfxpAH": {
+      "type": "custom-image-banner",
+      "name": "Custom image banner",
       "settings": {
-        "image": "shopify://shop_images/item.png",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "image": "shopify://shop_images/product-data.webp",
+        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
       }
     },
     "image_with_text_9G7iLW": {
       "type": "image-with-text",
+      "blocks": {
+        "heading_LnCqcJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Treats & Tip",
+            "heading_size": "h1"
+          }
+        },
+        "text_ycdrjG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover simple, wholesome ways to treat your cat. From easy recipes to daily care tips, unlock fun and nourishing ideas to keep your feline happy and healthy.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_tEJc9f": {
+          "type": "button",
+          "settings": {
+            "button_label": "Feed the Curiosity",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LnCqcJ",
+        "text_ycdrjG",
+        "button_tEJc9f"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/cat_eat.jpg",
@@ -209,7 +229,7 @@
   },
   "order": [
     "main",
-    "image_banner_ApmPJN",
+    "custom_image_banner_HfxpAH",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products",
