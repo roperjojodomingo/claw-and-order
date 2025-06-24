@@ -16,77 +16,118 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 4 -%}
+{% if section.settings.is_grid %}
   <div class="main-blog page-width section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} articles-wrapper">
     <h1 class=" title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} pawmunity-table-heading">
-      Pawmunity Table
+      {{ section.settings.header }}
     </h1>
-    <div class="blog-articles-container">
-      <div class="blog-articles-main">
-        {%- for article in blog.articles -%}
-          <article class="blog-articles-individual">
-            <p class="article-date">{{ article.published_at | time_tag: format: 'date' }}</p>
-            <div class="article-content">
-              <div class="article-main-content">
-                {% if article.image != blank %}
-                  <a href="{{ article.url }}">
-                    <img
-                      srcset="
-                        {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                        {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                        {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                        {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                        {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                        {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                        {{ article.image.src | image_url }} {{ article.image.src.width }}w
-                      "
-                      src="{{ article.image.src | image_url: width: 533 }}"
-                      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                      alt="{{ article.image.src.alt | escape }}"
-                      class="article-image"
-                      {% unless lazy_load == false %}
-                        loading="lazy"
-                      {% endunless %}
-                      width="{{ article.image.width }}"
-                      height="{{ article.image.height }}"
-                  ></a>
-                {% endif %}
-                <h3 class="article-title">
-                  <a href="{{ article.url }}">{{ article.title }}</a>
-                </h3>
-                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                  <p class="article-card__excerpt">
-                    {%- if article.excerpt.size > 0 -%}
-                      {{ article.excerpt | strip_html | truncatewords: 60 }}
-                    {%- else -%}
-                      {{ article.content | strip_html | truncatewords: 60 }}
-                    {%- endif -%}
-                  </p>
-                {%- endif -%}
-                <a class="article-read-more" href="{{ article.url }}">Read more</a>
-              </div>
-            </div>
-          </article>
-        {%- endfor -%}
-      </div>
-      <div class="blog-recent-articles">
-        <h4>Recent articles</h4>
-        {%- for article in blog.articles -%}
-          <div class="recent-article-container">
-            <div class="hover-line">
-              <a href="{{ article.url }}">{{ article.title }}</a>
-            </div>
-            <p>{{ article.published_at | time_tag: format: 'date' }}</p>
-          </div>
-        {%- endfor -%}
-      </div>
+    <div class="grid-blog-articles-container">
+      {%- for article in blog.articles -%}
+        <article class="grid-blog-articles-container-item">
+          {% if article.image != blank %}
+            <a href="{{ article.url }}">
+              <img
+                srcset="
+                  {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                "
+                src="{{ article.image.src | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ article.image.src.alt | escape }}"
+                class="article-image"
+                {% unless lazy_load == false %}
+                  loading="lazy"
+                {% endunless %}
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+            ></a>
+          {% endif %}
+          <h3 class="article-title">
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          </h3>
+          <a class="article-read-more" href="{{ article.url }}">Read more</a>
+        </article>
+      {%- endfor -%}
     </div>
-
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
   </div>
-{%- endpaginate -%}
+{% else %}
+  {%- paginate blog.articles by 4 -%}
+    <div class="main-blog page-width section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} articles-wrapper">
+      <h1 class=" title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} pawmunity-table-heading">
+        {{ section.settings.header }}
+      </h1>
+      <div class="blog-articles-container">
+        <div class="blog-articles-main">
+          {%- for article in blog.articles -%}
+            <article class="blog-articles-individual">
+              <p class="article-date">{{ article.published_at | time_tag: format: 'date' }}</p>
+              <div class="article-content">
+                <div class="article-main-content">
+                  {% if article.image != blank %}
+                    <a href="{{ article.url }}">
+                      <img
+                        srcset="
+                          {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                          {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                          {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                          {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                          {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                          {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                          {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                        "
+                        src="{{ article.image.src | image_url: width: 533 }}"
+                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                        alt="{{ article.image.src.alt | escape }}"
+                        class="article-image"
+                        {% unless lazy_load == false %}
+                          loading="lazy"
+                        {% endunless %}
+                        width="{{ article.image.width }}"
+                        height="{{ article.image.height }}"
+                    ></a>
+                  {% endif %}
+                  <h3 class="article-title">
+                    <a href="{{ article.url }}">{{ article.title }}</a>
+                  </h3>
+                  {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                    <p class="article-card__excerpt">
+                      {%- if article.excerpt.size > 0 -%}
+                        {{ article.excerpt | strip_html | truncatewords: 60 }}
+                      {%- else -%}
+                        {{ article.content | strip_html | truncatewords: 60 }}
+                      {%- endif -%}
+                    </p>
+                  {%- endif -%}
+                  <a class="article-read-more" href="{{ article.url }}">Read more</a>
+                </div>
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+        <div class="blog-recent-articles">
+          <h4>Recent articles</h4>
+          {%- for article in blog.articles -%}
+            <div class="recent-article-container">
+              <div class="hover-line">
+                <a href="{{ article.url }}">{{ article.title }}</a>
+              </div>
+              <p>{{ article.published_at | time_tag: format: 'date' }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+{% endif %}
 
 {% schema %}
 {
@@ -95,20 +136,9 @@
   "class": "section",
   "settings": [
     {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "grid",
-          "label": "t:sections.main-blog.settings.layout.options__1.label"
-        },
-        {
-          "value": "collage",
-          "label": "t:sections.main-blog.settings.layout.options__2.label"
-        }
-      ],
-      "default": "collage",
-      "label": "t:sections.main-blog.settings.layout.label"
+      "type": "text",
+      "id": "header",
+      "label": "Header"
     },
     {
       "type": "checkbox",
@@ -184,6 +214,16 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "View"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_grid",
+      "label": "Grid view",
+      "default": false
     }
   ]
 }

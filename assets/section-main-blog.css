@@ -260,3 +260,16 @@
   font-weight: 300;
   margin-bottom: 10px;
 }
+
+.grid-blog-articles-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4%; 
+}
+
+
+@media (max-width: 768px) {
+  .grid-blog-articles-container {
+    grid-template-columns: 1fr;
+  }
+}
