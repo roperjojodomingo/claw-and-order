@@ -5,7 +5,7 @@
 .list-menu--disclosure {
   position: absolute;
   min-width: 100%;
-  width: 20rem;
+  width: 25rem;
 }
 
 .list-menu--disclosure:focus {

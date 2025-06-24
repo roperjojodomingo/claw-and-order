@@ -1,6 +1,13 @@
 .blog-articles {
 }
 
+@media screen and (min-width: 768px) {
+  .articles-wrapper {
+    padding: 0;
+    max-width: 1200px !important;
+  }
+}
+
 .blog-articles .card-wrapper {
   width: 100%;
 }

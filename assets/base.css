@@ -3712,3 +3712,20 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+#shopify-section-sections--18210403745964__1750731563a546225e .page-width,
+#insta-feed {
+  padding: 0 !important;
+  margin-top: 0 !important;
+  width: 100%;
+  max-width: unset;
+}
+
+#instagenie-list {
+  width: unset;
+  width: 100%;
+}
+
+.instagenie-branding {
+  display: none;
+}
