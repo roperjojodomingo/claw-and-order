@@ -17,33 +17,13 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_F9T3bG": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_RkXzRP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Loved by Cats, Trusted by Humans",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_RkXzRP"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+    "image_banner_with_text_animation_tdXmTj": {
+      "type": "image-banner-with-text-animation",
+      "name": "Image banner with animated text",
       "settings": {
         "image": "shopify://shop_images/banner.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "heading": "Loved by Cats, Trusted by Humans",
+        "color_scheme": "scheme-4"
       }
     },
     "rich_text_FdRthK": {
@@ -72,7 +52,7 @@
   },
   "order": [
     "main",
-    "image_banner_F9T3bG",
+    "image_banner_with_text_animation_tdXmTj",
     "rich_text_FdRthK"
   ]
 }

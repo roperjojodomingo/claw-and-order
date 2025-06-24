@@ -1,0 +1,54 @@
+{{ 'section-image-banner-with-text-animation.css' | asset_url | stylesheet_tag }}
+
+<div class="image-banner-with-text color-{{ section.settings.color_scheme }}">
+  {%- if section.settings.image -%}
+    <div class="banner-media">
+      <img
+        src="{{ section.settings.image | image_url: width: 1445 }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        class="banner-image"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        loading="lazy"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="banner-content">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="banner-heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image banner with text",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image banner with animated text",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
