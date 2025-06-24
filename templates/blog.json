@@ -18,7 +18,8 @@
         "show_date": true,
         "show_author": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
     "quick_links_4Tade8": {
@@ -68,7 +69,7 @@
       ],
       "name": "Quick links",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
         "num_of_column": 3
       }
     }

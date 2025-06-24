@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 4 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
+  <div class="main-blog page-width section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
     <h1 class=" title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} pawmunity-table-heading">
       Pawmunity Table
     </h1>
@@ -29,26 +29,27 @@
             <div class="article-content">
               <div class="article-main-content">
                 {% if article.image != blank %}
-                  <img
-                    srcset="
-                      {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                      {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                      {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                      {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                      {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                      {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                      {{ article.image.src | image_url }} {{ article.image.src.width }}w
-                    "
-                    src="{{ article.image.src | image_url: width: 533 }}"
-                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                    alt="{{ article.image.src.alt | escape }}"
-                    class="article-image"
-                    {% unless lazy_load == false %}
-                      loading="lazy"
-                    {% endunless %}
-                    width="{{ article.image.width }}"
-                    height="{{ article.image.height }}"
-                  >
+                  <a href="{{ article.url }}">
+                    <img
+                      srcset="
+                        {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                        {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                        {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                        {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                      "
+                      src="{{ article.image.src | image_url: width: 533 }}"
+                      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                      alt="{{ article.image.src.alt | escape }}"
+                      class="article-image"
+                      {% unless lazy_load == false %}
+                        loading="lazy"
+                      {% endunless %}
+                      width="{{ article.image.width }}"
+                      height="{{ article.image.height }}"
+                  ></a>
                 {% endif %}
                 <h3 class="article-title">
                   <a href="{{ article.url }}">{{ article.title }}</a>
@@ -174,6 +175,15 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
     }
   ]
 }
