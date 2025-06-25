@@ -18,35 +18,37 @@
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
       }
     },
+    "bundle_information_pdgR6q": {
+      "type": "bundle-information",
+      "name": "Bundle information",
+      "settings": {
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,
         "columns_mobile": "2",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "standard",
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
-        "enable_sorting": true,
+        "enable_sorting": false,
         "padding_top": 16,
         "padding_bottom": 100
       }
-    },
-    "certifications_y6a8tx": {
-      "type": "certifications",
-      "name": "Certifications",
-      "settings": {}
     }
   },
   "order": [
     "banner",
-    "product-grid",
-    "certifications_y6a8tx"
+    "bundle_information_pdgR6q",
+    "product-grid"
   ]
 }

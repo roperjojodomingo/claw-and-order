@@ -1,0 +1,74 @@
+{{ 'section-bundle-information.css' | asset_url | stylesheet_tag }}
+
+{% assign total_price = 0 %}
+{% assign discount = collection.metafields.custom.discount | plus: 0 %}
+
+{% for product in collection.products %}
+  {% assign total_price = total_price | plus: product.price %}
+{% endfor %}
+
+{% if discount %}
+  {% assign discount_rate = discount | times: 1.0 | divided_by: 100 %}
+  {% assign discount_amount = total_price | times: discount_rate %}
+  {% assign discounted_price = total_price | minus: discount_amount %}
+{% endif %}
+
+{% if collection %}
+  <div class="bundle-information-section color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width">
+      <div class="bundle-information-content">
+        <div>
+          <h2>
+            Get All
+            {% if collection.metafields.custom.discount %}
+              & Save {{ collection.metafields.custom.discount }}%
+            {% endif -%}
+            – The Purrfect Combo
+          </h2>
+          <p class="bundle-total-price-label">Total price:</p>
+          <div class="bundle-price-display">
+            <span class="bundle-new-price money">{{ discounted_price | money }}</span>
+            <span class="bundle-old-price money">{{ total_price | money }}</span>
+          </div>
+        </div>
+        {% comment %}
+          <div class="button-wrapper">
+            <button
+              id="add-bundle-to-cart"
+              class="button button--primary"
+              data-collection-handle="{{ collection.handle }}"
+            >
+              <span class="button-text"
+                >Add the Purrfect Combo
+                {% if collection.metafields.custom.discount %}
+                  – Save {{ collection.metafields.custom.discount }}%
+                {% endif -%}
+              </span>
+            </button>
+          </div>
+          <p class="bundle-note">Discounts will be applied at checkout</p>
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Bundle information",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle information"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+.bundle-information-section {
+  padding: 0;
+}
+
+.bundle-information-content {
+  padding-top: 16px;
+}
+
+.bundle-information-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bundle-total-price-label {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.bundle-price-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bundle-new-price {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: rgb(var(--color-foreground));
+}
+
+.bundle-old-price {
+  font-size: 2.4rem;
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.bundle-button-wrapper {
+  margin-top: 2rem;
+}
+
+.bundle-note {
+  font-size: 1.2rem;
+  margin: 12px 0 0 0;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 749px) {
+  .bundle-information-section {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}

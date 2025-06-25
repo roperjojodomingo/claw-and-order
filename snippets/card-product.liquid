@@ -28,6 +28,23 @@
   {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
+
+{% style %}
+  .sold-out-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 2;
+    pointer-events: none;
+  }
+{% endstyle %}
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -59,7 +76,7 @@
       >
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
-            <div class="media media--transparent media--hover-effect">
+            <div class="media media--transparent media--hover-effect media-with-badge">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
@@ -104,6 +121,9 @@
                 >
               {%- endif -%}
             </div>
+            {%- if card_product.selected_or_first_available_variant.available == false -%}
+              <span class="sold-out-badge"> Sold out </span>
+            {%- endif -%}
           </div>
         {%- endif -%}
         <div class="card__content">

@@ -22,6 +22,7 @@
 
 .collection-hero__text-wrapper {
   flex-basis: 100%;
+  padding-bottom: 12px;
   border-bottom: 1px solid #cdcdcd;
 }
 

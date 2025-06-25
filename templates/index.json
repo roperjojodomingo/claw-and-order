@@ -70,6 +70,41 @@
         "padding_bottom": 100
       }
     },
+    "other_pages_n7fLAk": {
+      "type": "other-pages",
+      "blocks": {
+        "other_page_block_cxKE4H": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/bundle1.png",
+            "heading": "The Purrfect Starter Pack",
+            "description": "Everything your feline friend needs to feel right at home. This bundle includes a cozy bed, nourishing food, and tasty treats — perfect for new cat parents or as a thoughtful gift. Give your cat comfort, care, and love from day one.",
+            "button_text": "View bundle",
+            "url": "shopify://collections/the-purrfect-starter-pack"
+          },
+          "blocks": {}
+        },
+        "other_page_block_XmDpGP": {
+          "type": "other-page-block",
+          "settings": {
+            "image": "shopify://shop_images/bundle2.png",
+            "heading": "Meow & Munch Combo",
+            "description": "Treat your cat to a delicious mix of their favorite snacks and meals. Curated with gourmet wet food, crunchy bites, and irresistible treats, this bundle is designed to keep your kitty purring with satisfaction at every bite.",
+            "button_text": "View bundle",
+            "url": "shopify://collections/meow-munch-combo"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "other_page_block_cxKE4H",
+        "other_page_block_XmDpGP"
+      ],
+      "name": "Other pages",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "about_us_yYECBW": {
       "type": "about-us",
       "blocks": {
@@ -414,6 +449,7 @@
   "order": [
     "video_banner_LNcETe",
     "featured_collection",
+    "other_pages_n7fLAk",
     "about_us_yYECBW",
     "custom_collections_GaiUUh",
     "other_pages_JQpRip",
