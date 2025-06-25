@@ -37,6 +37,10 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+    .section-{{ section.id }}-header {
+      color: {{ section.settings.header_color }};
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -96,15 +100,22 @@
                 >
                   {{- block.settings.text -}}
                 </p>
+
               {%- when 'title' -%}
-                <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                <div
+                  class="product__title"
+                  {{ block.shopify_attributes }}
+                >
+                  <h1 class="{% if section.settings.header_color != blank%} section-{{ section.id }}-header{% endif %}">
+                    {{ product.title | escape }}
+                  </h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
                   </a>
                 </div>
+                <hr class="product-form-separator" style="margin-bottom: 30px;">
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -192,7 +203,6 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
-                <hr class="product-form-separator" style="margin-bottom: 30px;">
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
@@ -200,7 +210,8 @@
                 {%- endif -%}
 
               {%- when 'free_shipping' -%}
-                {% if block.settings.text != blank %}
+                {% assign threshold_number = settings.free_shipping_threshold | times: 1 %}
+                {% if block.settings.text != blank and threshold_number > 0 %}
                   <div class="free-shipping">
                     {{- 'icon-shipping.svg' | inline_asset_content -}}
                     <p>{{ block.settings.text }}</p>
@@ -925,7 +936,7 @@
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "checkbox",
@@ -2133,6 +2144,11 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header color"
     },
     {
       "type": "header",

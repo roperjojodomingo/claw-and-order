@@ -232,6 +232,39 @@
           "secondary_button_label": "#373737",
           "shadow": "#373737"
         }
+      },
+      "scheme-9dbd6ec0-53ac-43b6-bcc4-706498d7cd77": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#e2001a",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#e2001a",
+          "shadow": "#e2001a"
+        }
+      },
+      "scheme-2e66ec42-83fe-4e62-accf-62b7883ddb52": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#373737",
+          "button": "#e0211b",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#e0211b",
+          "shadow": "#e0211b"
+        }
+      },
+      "scheme-f07329aa-bf76-4616-ba46-6f682f8517db": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#0032a0",
+          "button": "#0077c8",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#0077c8",
+          "shadow": "#0077c8"
+        }
       }
     }
   },

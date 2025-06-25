@@ -39,20 +39,22 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
         },
         "free_shipping_6MrqCf": {
           "type": "free_shipping",
-          "settings": {}
+          "settings": {
+            "text": "Free Shipping on Orders Over ₱3,000!"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
         },
         "certifications_JigtAY": {
           "type": "certifications",
@@ -66,18 +68,19 @@
         "judge_me_reviews_preview_badge_b8BqFi",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "description",
         "free_shipping_6MrqCf",
+        "buy_buttons",
         "certifications_JigtAY"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "color_scheme": "scheme-f07329aa-bf76-4616-ba46-6f682f8517db",
+        "header_color": "",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
