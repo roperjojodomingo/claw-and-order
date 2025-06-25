@@ -164,7 +164,7 @@ if (!customElements.get('quick-order-list')) {
             id: 'CartDrawer',
             selector: '.drawer__inner',
             section: 'cart-drawer',
-          },
+          }
         ];
       }
 

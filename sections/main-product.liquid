@@ -200,10 +200,12 @@
                 {%- endif -%}
 
               {%- when 'free_shipping' -%}
-                <div class="free-shipping">
-                  {{- 'icon-shipping.svg' | inline_asset_content -}}
-                  <p>Free Shipping on Orders Over ₱2,500!</p>
-                </div>
+                {% if block.settings.text != blank %}
+                  <div class="free-shipping">
+                    {{- 'icon-shipping.svg' | inline_asset_content -}}
+                    <p>{{ block.settings.text }}</p>
+                  </div>
+                {% endif %}
 
               {%- when 'certifications' -%}
                 <hr class="product-form-separator" style="margin-top: 30px;">
@@ -949,7 +951,15 @@
     {
       "type": "free_shipping",
       "name": "Free shipping",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Free Shipping on Orders Over ₱3,000!",
+          "label": "Text"
+        }
+      ]
     },
     {
       "type": "certifications",
