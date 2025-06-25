@@ -1,0 +1,222 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_J7CUVG": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_b8BqFi": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "free_shipping_6MrqCf": {
+          "type": "free_shipping",
+          "settings": {}
+        },
+        "certifications_JigtAY": {
+          "type": "certifications",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "rating_J7CUVG",
+        "price",
+        "judge_me_reviews_preview_badge_b8BqFi",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "free_shipping_6MrqCf",
+        "certifications_JigtAY"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "custom_image_banner_HfxpAH": {
+      "type": "custom-image-banner",
+      "name": "Custom image banner",
+      "settings": {
+        "image": "shopify://shop_images/product-data.webp",
+        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
+      }
+    },
+    "image_with_text_9G7iLW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LnCqcJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Treats & Tip",
+            "heading_size": "h1"
+          }
+        },
+        "text_ycdrjG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover simple, wholesome ways to treat your cat. From easy recipes to daily care tips, unlock fun and nourishing ideas to keep your feline happy and healthy.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_tEJc9f": {
+          "type": "button",
+          "settings": {
+            "button_label": "Feed the Curiosity",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LnCqcJ",
+        "text_ycdrjG",
+        "button_tEJc9f"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/cat_eat.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rating_list_Prftf4": {
+      "type": "rating-list",
+      "blocks": {
+        "rating_block_8NXBLV": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "From nutrition to comfort, every product feels like it was designed with real feline needs in mind. My cats love the food — and won’t give up their new bed!",
+            "customer_name": "Elena Torres",
+            "credentials": "DVM, Feline Specialist"
+          },
+          "blocks": {}
+        },
+        "rating_block_zzA3Lf": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "It’s rare to find a brand that excels at both treats <em>and</em> toys. The scratcher is a hit, and I appreciate the clean ingredients in the treats.",
+            "customer_name": "Maya Chen",
+            "credentials": "Certified Pet Nutrition Coach"
+          },
+          "blocks": {}
+        },
+        "rating_block_EMDBng": {
+          "type": "rating-block",
+          "name": "Rating",
+          "settings": {
+            "star_rating": 5,
+            "text": "Smart design, premium feel, and most importantly — my cat is obsessed. The cozy bed and natural treats are a winning combo.",
+            "customer_name": "Leo Graham",
+            "credentials": "Feline Behaviorist"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "rating_block_8NXBLV",
+        "rating_block_zzA3Lf",
+        "rating_block_EMDBng"
+      ],
+      "name": "Ratings",
+      "settings": {
+        "heading": "What Our Pawrents Say",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "background": "#f5f7f7"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_image_banner_HfxpAH",
+    "image_with_text_9G7iLW",
+    "rating_list_Prftf4",
+    "related-products"
+  ]
+}
