@@ -80,7 +80,7 @@
             "heading": "The Purrfect Starter Pack",
             "description": "Everything your feline friend needs to feel right at home. This bundle includes a cozy bed, nourishing food, and tasty treats — perfect for new cat parents or as a thoughtful gift. Give your cat comfort, care, and love from day one.",
             "button_text": "View bundle",
-            "url": "shopify://collections/the-purrfect-starter-pack"
+            "url": "shopify://products/the-purrfect-starter-pack"
           },
           "blocks": {}
         },
@@ -91,7 +91,7 @@
             "heading": "Meow & Munch Combo",
             "description": "Treat your cat to a delicious mix of their favorite snacks and meals. Curated with gourmet wet food, crunchy bites, and irresistible treats, this bundle is designed to keep your kitty purring with satisfaction at every bite.",
             "button_text": "View bundle",
-            "url": "shopify://collections/meow-munch-combo"
+            "url": "shopify://products/meow-munch-combo"
           },
           "blocks": {}
         }
