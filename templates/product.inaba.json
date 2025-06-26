@@ -90,12 +90,32 @@
         "padding_bottom": 100
       }
     },
-    "custom_image_banner_HfxpAH": {
-      "type": "custom-image-banner",
-      "name": "Custom image banner",
+    "vendor_data_banner_4bRGKt": {
+      "type": "vendor-data-banner",
+      "blocks": {
+        "heading_fPRLQT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Flavor-Packed Treats"
+          }
+        },
+        "text_8AVyBt": {
+          "type": "text",
+          "settings": {
+            "text": "Our wholesome cat treats foster cherished moments between you and your cat. Choose the treat type and flavor that your furry friend will enjoy most, and start looking forward to snack time."
+          }
+        }
+      },
+      "block_order": [
+        "heading_fPRLQT",
+        "text_8AVyBt"
+      ],
+      "name": "Vendor data",
       "settings": {
-        "image": "shopify://shop_images/product-data.webp",
-        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
+        "image": "shopify://shop_images/for_cats_1.jpg",
+        "color_scheme": "scheme-c589d20d-6db8-4ba9-82a4-e3ac9ab340aa",
+        "content_position": "center",
+        "text_align": "center"
       }
     },
     "image_with_text_9G7iLW": {
@@ -217,7 +237,7 @@
   },
   "order": [
     "main",
-    "custom_image_banner_HfxpAH",
+    "vendor_data_banner_4bRGKt",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products"

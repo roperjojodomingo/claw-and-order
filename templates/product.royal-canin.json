@@ -90,12 +90,33 @@
         "padding_bottom": 100
       }
     },
-    "custom_image_banner_HfxpAH": {
-      "type": "custom-image-banner",
-      "name": "Custom image banner",
+    "vendor_data_banner_kpDbd8": {
+      "type": "vendor-data-banner",
+      "blocks": {
+        "heading_Y47RLw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Every pet is unique and so are their nutritional needs"
+          }
+        },
+        "buttons_Q9FngU": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Get the tailored products",
+            "button_link": "https://www.royalcanin.com/us/pet-food-finder"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y47RLw",
+        "buttons_Q9FngU"
+      ],
+      "name": "Vendor data",
       "settings": {
-        "image": "shopify://shop_images/product-data.webp",
-        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
+        "image": "shopify://shop_images/royal.jpg",
+        "color_scheme": "scheme-65eb1a7a-2dae-48b1-b66d-99a91650b5af",
+        "content_position": "center",
+        "text_align": "center"
       }
     },
     "image_with_text_9G7iLW": {
@@ -217,7 +238,7 @@
   },
   "order": [
     "main",
-    "custom_image_banner_HfxpAH",
+    "vendor_data_banner_kpDbd8",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products"

@@ -1,6 +1,7 @@
 .featured-collection-slider-wrapper {
-  width: 80%;
+  width: 100%;
   max-width: 1660px;
+  padding: 0 5rem;
   margin: 0 auto;
 }
 

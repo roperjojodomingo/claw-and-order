@@ -1,0 +1,176 @@
+{{ 'section-vendor-data.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    .vendor-data-{{ section.id }}-text {
+      text-align: {{ section.settings.text_align }}
+    }
+
+    .vendor-data-{{ section.id }}-position {
+      {% case section.settings.content_position %}
+        {% when 'left' %}
+          left: 5%;
+          transform: translateY(-50%);
+        {% when 'center' %}
+          left: 50%;
+          transform: translate(-50%, -50%);
+        {% when 'right' %}
+          left: auto;
+          right: 5%;
+          transform: translateY(-50%);
+      {% endcase %}
+  }
+{% endstyle %}
+
+<div class="vendor-data-container">
+  <div class="vendor-data-container-responsive-image-wrapper">
+    {% if section.settings.image != blank %}
+      <img
+        loading="lazy"
+        class="vendor-data-image"
+        src="{{ section.settings.image | image_url: width: 2000 }}"
+        alt="Vendor data image"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+      >
+    {% endif %}
+
+    <div class="vendor-data-content color-{{ section.settings.color_scheme }} vendor-data-{{ section.id }}-text vendor-data-{{ section.id }}-position">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'heading' %}
+            <h2>{{ block.settings.heading }}</h2>
+          {% when 'text' %}
+            <p>{{ block.settings.text }}</p>
+          {% when 'buttons' %}
+            <a href="{{ block.settings.button_link }}" target="_blank" class="button">
+              {{ block.settings.button_label }}
+            </a>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Vendor data",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Content position"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left",
+      "label": "Text and button alignment"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Lorem ipsum dolor"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button text",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link",
+          "default": "/collections/all"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vendor data",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

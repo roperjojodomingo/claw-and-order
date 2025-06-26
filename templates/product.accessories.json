@@ -20,12 +20,16 @@
           "type": "rating",
           "settings": {}
         },
-        "price": {
-          "type": "price",
+        "description": {
+          "type": "description",
           "settings": {}
         },
         "judge_me_reviews_preview_badge_b8BqFi": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
           "settings": {}
         },
         "variant_picker": {
@@ -46,13 +50,11 @@
             "show_gift_card_recipient": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "free_shipping_6MrqCf": {
           "type": "free_shipping",
-          "settings": {}
+          "settings": {
+            "text": "Free Shipping on Orders Over ₱3,000!"
+          }
         },
         "certifications_JigtAY": {
           "type": "certifications",
@@ -62,37 +64,58 @@
       "block_order": [
         "title",
         "rating_J7CUVG",
-        "price",
+        "description",
         "judge_me_reviews_preview_badge_b8BqFi",
+        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "free_shipping_6MrqCf",
         "certifications_JigtAY"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-b62b5a77-5139-4da7-b868-1a77d4d37ee9",
+        "header_color": "",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "hover",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 100
       }
     },
-    "custom_image_banner_HfxpAH": {
-      "type": "custom-image-banner",
-      "name": "Custom image banner",
+    "vendor_data_banner_7BndGr": {
+      "type": "vendor-data-banner",
+      "blocks": {
+        "heading_DEKkr6": {
+          "type": "heading",
+          "settings": {
+            "heading": "For the care free kitty"
+          }
+        },
+        "text_eT9RpL": {
+          "type": "text",
+          "settings": {
+            "text": "Entertain them this summer with our cat toys and accessories"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DEKkr6",
+        "text_eT9RpL"
+      ],
+      "name": "Vendor data",
       "settings": {
-        "image": "shopify://shop_images/product-data.webp",
-        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
+        "image": "shopify://shop_images/cat_1.jpg",
+        "color_scheme": "",
+        "content_position": "left",
+        "text_align": "left"
       }
     },
     "image_with_text_9G7iLW": {
@@ -214,7 +237,7 @@
   },
   "order": [
     "main",
-    "custom_image_banner_HfxpAH",
+    "vendor_data_banner_7BndGr",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products"

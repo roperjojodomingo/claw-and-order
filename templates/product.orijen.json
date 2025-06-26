@@ -98,12 +98,33 @@
         "padding_bottom": 100
       }
     },
-    "custom_image_banner_HfxpAH": {
-      "type": "custom-image-banner",
-      "name": "Custom image banner",
+    "vendor_data_banner_3m3ffp": {
+      "type": "vendor-data-banner",
+      "blocks": {
+        "heading_CXbwNi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find the right recipe for your pet"
+          }
+        },
+        "buttons_VNNkNF": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Get started",
+            "button_link": "https://www.orijenpetfoods.com/en-US/find-the-right-recipe?animal=cat"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CXbwNi",
+        "buttons_VNNkNF"
+      ],
+      "name": "Vendor data",
       "settings": {
-        "image": "shopify://shop_images/product-data.webp",
-        "image_mobile": "shopify://shop_images/prodcut-data-mobile.webp"
+        "image": "shopify://shop_images/orijen_1.jpg",
+        "color_scheme": "scheme-1073c98b-1b98-4ed3-9ab3-f5f398f49dc3",
+        "content_position": "left",
+        "text_align": "left"
       }
     },
     "image_with_text_9G7iLW": {
@@ -225,7 +246,7 @@
   },
   "order": [
     "main",
-    "custom_image_banner_HfxpAH",
+    "vendor_data_banner_3m3ffp",
     "image_with_text_9G7iLW",
     "rating_list_Prftf4",
     "related-products"
